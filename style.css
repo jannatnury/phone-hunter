@@ -1,0 +1,9 @@
+ /* Global Style */
+*{
+    /* Google Fonts Link */
+    font-family: 'Lora', serif;
+}
+h1{
+    color: darkblue;
+    background-color: darkgrey;
+}
