@@ -3,7 +3,19 @@
     /* Google Fonts Link */
     font-family: 'Lora', serif;
 }
+/* Header Styles */
+h3{
+    color: darkslateblue;
+}
+.menu{
+    background-color: lightgray;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+/* Header Styles Ends*/
+/* Main section Styles */
 h1{
-    color: darkblue;
-    background-color: darkgrey;
+    color: orangered;
 }
