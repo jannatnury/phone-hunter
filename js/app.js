@@ -1,16 +1,23 @@
+// global variable
+const detailsOfPhone = document.getElementById("details");
+const cardDetails = document.getElementById("phone-details");
 // error text
 const errorMsg = document.getElementById('error-text');
 // Get all phones
 const phoneNames = () => {
     const searchInput = document.getElementById("search-input");
     const inputValue = searchInput.value;
-    const url = ` https://openapi.programming-hero.com/api/phones?search=${inputValue}`;
+    detailsOfPhone.textContent = '';
+    cardDetails.textContent = '';
     if (inputValue == '') {
         errorMsg.style.display = 'block';
     }
-    fetch(url)
-        .then(res => res.json())
-        .then(data => details(data.data.slice(0, 20)));
+    else{
+        const url = ` https://openapi.programming-hero.com/api/phones?search=${inputValue}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => details(data.data.slice(0, 20)));
+    }
 };
 // Get phone data
 const details = (phones) => {
@@ -18,7 +25,8 @@ const details = (phones) => {
     if (phones.length == 0) {
         errorMsg.style.display = 'block';
     }
-    const cardDetails = document.getElementById("phone-details");
+    
+    // empty content
     cardDetails.textContent = '';
     for (const phone of phones) {
         // console.log(phone);
@@ -29,7 +37,6 @@ const details = (phones) => {
             <h5 class="card-title">${phone.brand}</h5>
             <h5 class="card-title">${phone.phone_name}</h5>
             <button onclick="loadDetails('${phone.slug}')">Details</button>
-        
         </div>`;
         // create childs
         cardDetails.appendChild(cardValue);
@@ -45,7 +52,6 @@ const loadDetails = (details) => {
 // Show Phone Details
 const showDetails = (phnDetails) => {
     console.log(phnDetails);
-    const detailsOfPhone = document.getElementById("details");
     detailsOfPhone.textContent = '';
     const createDiv = document.createElement("div");
     // Phone features
@@ -71,7 +77,10 @@ const showDetails = (phnDetails) => {
 
   </div>
 </div>`
-//  create childs
+    //  create childs
     detailsOfPhone.appendChild(createDiv);
+    
+    // empty cards
+    
 }
 
