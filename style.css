@@ -30,7 +30,12 @@ h1{
 #error-text{
     display: none;
 }
-/*  Main section Styles ends */ */
+/*  Main section Styles ends */ 
+/* Footer Styles Here */
+.footer {
+   background-color: goldenrod;
+}
+/* Footer Styles Ends Here */
 
 /* javascript styles here */
 .title{
