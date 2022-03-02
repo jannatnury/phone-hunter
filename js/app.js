@@ -47,21 +47,21 @@ const showDetails = (phnDetails) => {
      <div class="card" style="width: 18rem;">
   <img src="${phnDetails.image}" class="card-img-top" alt="...">
   <div class="card-body">
-  <h5>${phnDetails.name}</h5>
-  <h5>${phnDetails.brand}</h5>
-  <P>Release Date :${phnDetails.releaseDate ? phnDetails.releaseDate : "Not Found !"}</P>
+  <h5 class="title">${phnDetails.name}</h5>
+  <h5 class="title">${phnDetails.brand}</h5>
+  <P><span class="text">Release Date :</span> ${phnDetails.releaseDate ? phnDetails.releaseDate : "Not Found !"}</P>
   <h5>Main Featues :</h5>
-  <P><span class="text">Chipset :</span>${phnDetails.mainFeatures.chipSet}</P>
-  <P>Display :${phnDetails.mainFeatures.displaySize}</P>
-  <P>Memory :${phnDetails.mainFeatures.memory}</P>
-  <P>Storage :${phnDetails.mainFeatures.storage}</P>
-  <h5>Others :</h5>
-  <P>Bluetooth :${phnDetails.others?.Bluetooth ? phnDetails.others?.Bluetooth : "Not Found !"}</P>
-  <P>GPS :${phnDetails.others?.GPS ? phnDetails.others?.GPS : "Not Found !"}</P>
-  <P>NFC :${phnDetails.others?.NFC ? phnDetails.others?.NFC : "Not Found !"}</P>
-  <P>Radio :${phnDetails.others?.Radio ? phnDetails.others.Radio : "Not Found !"}</P>
-  <P>USB :${phnDetails.others?.USB ? phnDetails.others?.USB : "Not Found !"}</P>
-  <P>WLAN :${phnDetails.others?.WLAN ? phnDetails.others?.WLAN : "Not Found !"}</P>
+  <P><span class="text">Chipset :</span> ${phnDetails.mainFeatures.chipSet}</P>
+  <P><span class="text">Display :</span> ${phnDetails.mainFeatures.displaySize}</P>
+  <P><span class="text">Memory :</span> ${phnDetails.mainFeatures.memory}</P>
+  <P><span class="text">Storage :</span> ${phnDetails.mainFeatures.storage}</P>
+  <h5 class="title">Others :</h5>
+  <P><span class="text">Bluetooth :</span> ${phnDetails.others?.Bluetooth ? phnDetails.others?.Bluetooth : "Not Found !"}</P>
+  <P><span class="text">GPS :</span> ${phnDetails.others?.GPS ? phnDetails.others?.GPS : "Not Found !"}</P>
+  <P><span class="text">NFC :</span> ${phnDetails.others?.NFC ? phnDetails.others?.NFC : "Not Found !"}</P>
+  <P><span class="text">Radio :</span> ${phnDetails.others?.Radio ? phnDetails.others.Radio : "Not Found !"}</P>
+  <P><span class="text">USB :</span> ${phnDetails.others?.USB ? phnDetails.others?.USB : "Not Found !"}</P>
+  <P><span class="text">WLAN :</span> ${phnDetails.others?.WLAN ? phnDetails.others?.WLAN : "Not Found !"}</P>
 
   </div>
 </div>`

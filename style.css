@@ -35,7 +35,13 @@ h1{
     background-color:goldenrod;
 }
 /* Footer Styles Ends Here */
+
+/* javascript styles here */
+.title{
+    color: darkgreen;
+    font-weight: bolder;
+}
 .text{
-    color: blueviolet;
+    color:goldenrod;
     font-weight: bold;
 }
