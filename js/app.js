@@ -1,4 +1,6 @@
+// error text
 const errorMsg = document.getElementById('error-text');
+// Get all phones
 const phoneNames = () => {
     const searchInput = document.getElementById("search-input");
     const inputValue = searchInput.value;
@@ -10,6 +12,7 @@ const phoneNames = () => {
         .then(res => res.json())
         .then(data => details(data.data.slice(0, 20)));
 };
+// Get phone data
 const details = (phones) => {
     errorMsg.style.display = 'none';
     if (phones.length == 0) {
@@ -28,9 +31,11 @@ const details = (phones) => {
             <button onclick="loadDetails('${phone.slug}')">Details</button>
         
         </div>`;
+        // create childs
         cardDetails.appendChild(cardValue);
     }
 };
+// Load phone Details
 const loadDetails = (details) => {
     const url = `https://openapi.programming-hero.com/api/phone/${details}`;
     fetch(url)
@@ -43,6 +48,7 @@ const showDetails = (phnDetails) => {
     const detailsOfPhone = document.getElementById("details");
     detailsOfPhone.textContent = '';
     const createDiv = document.createElement("div");
+    // Phone features
     createDiv.innerHTML = `
      <div class="card" style="width: 18rem;">
   <img src="${phnDetails.image}" class="card-img-top" alt="...">
@@ -50,7 +56,7 @@ const showDetails = (phnDetails) => {
   <h5 class="title">${phnDetails.name}</h5>
   <h5 class="title">${phnDetails.brand}</h5>
   <P><span class="text">Release Date :</span> ${phnDetails.releaseDate ? phnDetails.releaseDate : "Not Found !"}</P>
-  <h5>Main Featues :</h5>
+  <h5 class="title">Main Featues :</h5>
   <P><span class="text">Chipset :</span> ${phnDetails.mainFeatures.chipSet}</P>
   <P><span class="text">Display :</span> ${phnDetails.mainFeatures.displaySize}</P>
   <P><span class="text">Memory :</span> ${phnDetails.mainFeatures.memory}</P>
@@ -65,6 +71,7 @@ const showDetails = (phnDetails) => {
 
   </div>
 </div>`
+//  create childs
     detailsOfPhone.appendChild(createDiv);
 }
 
