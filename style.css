@@ -17,5 +17,18 @@ h3{
 /* Header Styles Ends*/
 /* Main section Styles */
 h1{
-    color: orangered;
+    color: goldenrod;
 }
+.button{
+    font-size: medium;
+    background-color: lightblue;
+}
+.image{
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+/* Footer Styles Here */
+.footer{
+    background-color:goldenrod;
+}
+/* Footer Styles Ends Here */

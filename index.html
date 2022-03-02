@@ -23,7 +23,7 @@
         <div class="row">
             <div class="d-flex justify-content-between p-4 menu">
                 <h3 class="fs-3 fw-bold">Phone Planet</h1>
-                    <div class="menu fw-bold fs-5">
+                    <div class="menu fs-5">
                         <a href="">Home</a>
                         <a href="">Brands</a>
                     </div>
@@ -33,25 +33,33 @@
     <!-- Header Part Ends  Here -->
     <!-- Main Section Starts Here -->
     <main class="container">
-      <div>
-        <h1 class="text-center mt-4 fw-bold">Get Your Dream Phone</h1>
-        <div class="row col-md-12 col-lg-6 mx-auto">
-            <img class="img-fluid" src="images/phone1.jpg" alt="phone">
-        </div>
-      </div>
-      <div class="w-75 mx-auto mt-4">
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search Phone Brands and Models" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-      </div>
+        <section>
+            <div>
+                <h1 class="text-center mt-4 fw-bold">Get Your Dream Phone</h1>
+                <div class="row col-md-12 col-lg-6 mx-auto image">
+                    <img class="img-fluid" src="images/phone3.png" alt="phone">
+                </div>
+            </div>
+            <div class="w-75 mx-auto mt-4 d-flex">
+                <input id="search-input" class="form-control me-2 button" type="search"
+                    placeholder="Search Phone Brands and Models" aria-label="Search">
+                <button id="search-btn" onclick="phoneNames()" class="btn btn-outline-primary"
+                    type="submit">Search</button>
+            </div>
+        </section>
+        <!-- Phone Details Part -->
+        <section class="mt-4">
+            <div id="phone-details" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+        </section>
 
     </main>
     <!-- Main Section Starts Here -->
     <!-- Footer Part Here -->
-    <footer class="bg-dark mt-5 text-center py-3">
-        <h5 class="text-white">Copyright 2022 Phone Planet</h5>
-        <h6 class="text-white">All Rights Reserved</h6>
+    <footer class="mt-5 text-center py-3 footer">
+        <h5 class="text-dark">Copyright 2022, Phone Planet</h5>
+        <h6 class="text-dark">All Rights Reserved</h6>
     </footer>
     <!-- Footer Part Ends Here -->
 
