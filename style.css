@@ -27,8 +27,15 @@ h1{
     background-color: aquamarine;
     border-radius: 15px;
 }
+#error-text{
+    display: none;
+}
 /* Footer Styles Here */
 .footer{
     background-color:goldenrod;
 }
 /* Footer Styles Ends Here */
+.text{
+    color: blueviolet;
+    font-weight: bold;
+}
